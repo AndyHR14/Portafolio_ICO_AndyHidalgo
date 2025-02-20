@@ -1,1 +1,7 @@
+Portafolio\Portafolio\controller\CategoriaController.class
+Portafolio\Portafolio\service\CategoriaService.class
+Portafolio\Portafolio\dao\CategoriaDao.class
+Portafolio\Portafolio\domain\Categoria.class
+Portafolio\Portafolio\ProjectConfig.class
 Portafolio\Portafolio\PortafolioAndyHApplication.class
+Portafolio\Portafolio\service\impl\CategoriaServiceImpl.class
