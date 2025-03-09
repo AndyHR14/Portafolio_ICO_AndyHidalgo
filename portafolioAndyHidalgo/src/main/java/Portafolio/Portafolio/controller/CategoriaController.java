@@ -7,6 +7,7 @@ package Portafolio.Portafolio.controller;
  *
  * @author Andy
  */
+import Portafolio.Portafolio.domain.Categoria;
 import Portafolio.Portafolio.service.CategoriaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +31,10 @@ public class CategoriaController {
         model.addAttribute("totalCategorias", categorias.size());
         return "/categoria/listado";
     }
+    
+    @GetMapping("/nuevo")
+    public String categoriaNuevo (Categoria categoria){
+        return "/categoria/modifica";
+    }
+    
 }
