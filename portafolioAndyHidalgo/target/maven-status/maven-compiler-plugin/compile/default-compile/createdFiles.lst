@@ -1,7 +1,14 @@
 Portafolio\Portafolio\controller\CategoriaController.class
+Portafolio\Portafolio\domain\Producto.class
 Portafolio\Portafolio\service\CategoriaService.class
+Portafolio\Portafolio\dao\ProductoDao.class
 Portafolio\Portafolio\dao\CategoriaDao.class
+Portafolio\Portafolio\service\FirebaseStorageService.class
 Portafolio\Portafolio\domain\Categoria.class
 Portafolio\Portafolio\ProjectConfig.class
 Portafolio\Portafolio\PortafolioAndyHApplication.class
+Portafolio\Portafolio\service\impl\ProductoServiceImpl.class
+Portafolio\Portafolio\service\ProductoService.class
 Portafolio\Portafolio\service\impl\CategoriaServiceImpl.class
+Portafolio\Portafolio\service\impl\FirebaseStorageServiceImpl.class
+Portafolio\Portafolio\controller\ProductoController.class

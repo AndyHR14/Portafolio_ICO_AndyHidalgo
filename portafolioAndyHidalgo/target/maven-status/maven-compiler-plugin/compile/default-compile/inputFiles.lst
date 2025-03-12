@@ -1,7 +1,14 @@
-C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\domain\Categoria.java
-C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\PortafolioAndyHApplication.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\controller\ProductoController.java
 C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\ProjectConfig.java
 C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\CategoriaService.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\FirebaseStorageService.java
 C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\impl\CategoriaServiceImpl.java
-C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\controller\CategoriaController.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\domain\Producto.java
 C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\dao\CategoriaDao.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\domain\Categoria.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\impl\ProductoServiceImpl.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\PortafolioAndyHApplication.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\impl\FirebaseStorageServiceImpl.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\service\ProductoService.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\controller\CategoriaController.java
+C:\Projects\Portafolio_ICO_AndyHidalgo\portafolioAndyHidalgo\src\main\java\Portafolio\Portafolio\dao\ProductoDao.java
