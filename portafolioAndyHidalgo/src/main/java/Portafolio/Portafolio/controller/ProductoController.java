@@ -2,6 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+/*
+Esta clase se encarga de las rutas de nuestro proyecto, por lo que es la que nos redirige entre las paginas de html que hemos creado,
+es por esto que es de suma importancia trabajarla con mucho cuidado y atencion.
+*/
 package Portafolio.Portafolio.controller;
 
 

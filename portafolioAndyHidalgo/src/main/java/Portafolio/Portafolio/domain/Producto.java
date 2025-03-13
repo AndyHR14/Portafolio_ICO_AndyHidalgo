@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+/*
+La clase domain se trata de nuestra interaccion con la base de datos, aqui definimos los atributos, la tabla e implementamos
+la funcion serializable para que nuestro proyecto pueda conectarse correctamente a la bd
+*/
 package Portafolio.Portafolio.domain;
 
 import jakarta.persistence.*;

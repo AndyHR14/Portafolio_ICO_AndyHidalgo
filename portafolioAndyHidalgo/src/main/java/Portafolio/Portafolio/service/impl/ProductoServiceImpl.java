@@ -1,7 +1,11 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+*/
+/*
+En service implement, como su nombre lo indica, se implementan, y crean las funciones de los metodos definidos anteriormente
+en nuestra clase service.
+*/
 package Portafolio.Portafolio.service.impl;
 
 import Portafolio.Portafolio.dao.ProductoDao;

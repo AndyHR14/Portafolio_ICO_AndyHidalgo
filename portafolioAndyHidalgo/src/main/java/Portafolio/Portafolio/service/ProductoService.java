@@ -2,6 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
+/*
+En esta clase, por medio de los atributos de la clase domain, definimos listas, metodos, y funciones que seran utilizadas
+luego en nuestro proyecto
+*/
 package Portafolio.Portafolio.service;
 
 import Portafolio.Portafolio.domain.Producto;
