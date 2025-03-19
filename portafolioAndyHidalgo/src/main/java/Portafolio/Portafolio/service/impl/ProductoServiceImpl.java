@@ -69,4 +69,9 @@ public class ProductoServiceImpl implements ProductoService {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<Producto> findByDescripcionContaining(String descripcion) {
+        return productoDao.findByDescripcionContaining(descripcion);
+    }
 }
