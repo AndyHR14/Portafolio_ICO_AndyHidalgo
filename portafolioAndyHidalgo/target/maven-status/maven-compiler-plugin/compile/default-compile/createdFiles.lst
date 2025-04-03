@@ -1,3 +1,4 @@
+Portafolio\Portafolio\service\UsuarioService.class
 Portafolio\Portafolio\controller\PruebasController.class
 Portafolio\Portafolio\domain\Producto.class
 Portafolio\Portafolio\service\CategoriaService.class
@@ -8,6 +9,7 @@ Portafolio\Portafolio\service\impl\UsuarioDetailsServiceImpl.class
 Portafolio\Portafolio\service\impl\CategoriaServiceImpl.class
 Portafolio\Portafolio\service\UsuarioDetailsService.class
 Portafolio\Portafolio\controller\CategoriaController.class
+Portafolio\Portafolio\service\impl\UsuarioServiceImpl.class
 Portafolio\Portafolio\dao\ProductoDao.class
 Portafolio\Portafolio\domain\Rol.class
 Portafolio\Portafolio\dao\CategoriaDao.class
@@ -16,5 +18,7 @@ Portafolio\Portafolio\PortafolioAndyHApplication.class
 Portafolio\Portafolio\dao\UsuarioDao.class
 Portafolio\Portafolio\service\impl\ProductoServiceImpl.class
 Portafolio\Portafolio\service\ProductoService.class
+Portafolio\Portafolio\controller\UsuarioController.class
+Portafolio\Portafolio\dao\RolDao.class
 Portafolio\Portafolio\service\impl\FirebaseStorageServiceImpl.class
 Portafolio\Portafolio\controller\ProductoController.class
