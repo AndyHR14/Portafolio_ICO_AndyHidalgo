@@ -3,7 +3,6 @@ drop schema if exists techshop;
 drop user if exists usuario_prueba;
 CREATE SCHEMA techshop ;
 
-/*Se crea un usuario para la base de datos llamado "usuario_prueba" y tiene la contraseña "Usuario_Clave."*/
 create user 'usuario_prueba'@'%' identified by 'Usuar1o_Clave.';
 
 /*Se asignan los prvilegios sobr ela base de datos TechShop al usuario creado */
@@ -48,7 +47,7 @@ CREATE TABLE usuario (
   telefono VARCHAR(15) NULL,
   ruta_imagen varchar(1024),
   activo boolean,
-  PRIMARY KEY (`id_usuario`))
+  PRIMARY KEY (id_usuario))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -79,9 +78,11 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 /*Se insertan 3 registros en la tabla cliente como ejemplo */
 INSERT INTO usuario (id_usuario, username,password,nombre, apellidos, correo, telefono,ruta_imagen,activo) VALUES 
-(1,'juan','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.','Juan', 'Castro Mora',    'jcastro@gmail.com',    '4556-8978', 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Juan_Diego_Madrigal.jpg/250px-Juan_Diego_Madrigal.jpg',true),
-(2,'rebeca','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi','Rebeca',  'Contreras Mora', 'acontreras@gmail.com', '5456-8789','https://upload.wikimedia.org/wikipedia/commons/0/06/Photo_of_Rebeca_Arthur.jpg',true),
+(1,'juan','$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.','Juan', 'Castro Mora',    'jcastro@gmail.com',    '4556-8978', 'https://img2.rtve.es/i/?w=1600&i=1677587980597.jpg',true),
+(2,'rebeca','$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi','Rebeca',  'Contreras Mora', 'acontreras@gmail.com', '5456-8789','https://media.licdn.com/dms/image/v2/C5603AQGwjJ5ht4bWXQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1661476259292?e=2147483647&v=beta&t=9_i5zTdqHRMSXlb9H4TuWkWeRGQXmaZLjxkBlWsg2lg',true),
 (3,'pedro','$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO','Pedro', 'Mena Loria',     'lmena@gmail.com',      '7898-8936','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Eduardo_de_Pedro_2019.jpg/480px-Eduardo_de_Pedro_2019.jpg?20200109230854',true);
+
+
 
 /*Se insertan 3 categorias de productos como ejemplo */
 INSERT INTO categoria (id_categoria,descripcion,ruta_imagen,activo) VALUES 
@@ -109,14 +110,13 @@ INSERT INTO producto (id_producto,id_categoria,descripcion,detalle,precio,existe
 (15,4,'Nokia 5430','Nullam porttitor vivamus phasellus tempus in morbi aliquet platea duis, nulla tristique inceptos pellentesque pulvinar congue sagittis euismod vitae lacinia, scelerisque mus orci sociosqu libero proin sed felis. Pretium tincidunt ultrices eu vel nam massa morbi diam sem, neque aliquet vehicula penatibus odio phasellus curabitur. Conubia natoque quis tellus scelerisque sociis facilisi nisi suspendisse, id interdum ornare vivamus proin himenaeos class sed in, suscipit torquent est aliquam orci nunc etiam. Congue et nisl magna cum id sociis enim suscipit integer, nisi egestas est porttitor sollicitudin commodo natoque pharetra torquent, aliquam euismod nam porta rhoncus non ante habitasse.',330000,0,'https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/08/nokia-xr20-1.jpg',true),
 (16,4,'Xiami x45','Litora metus senectus mattis egestas mus fames tempus suscipit, inceptos luctus hendrerit congue quis sem. Potenti quis conubia fermentum non dictum nibh, viverra neque sed pretium eros aptent, metus hac at imperdiet est. Accumsan donec sociosqu etiam venenatis felis aenean suspendisse facilisi dignissim conubia non, molestie est ultrices neque id diam pellentesque quis quisque in odio, per nulla aptent arcu vehicula lobortis aliquet tempor cum platea.',273000,0,'https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/03/20220315_104812-1-scaled.jpg',true);
 
-/*Se crean 6 facturas */   /*'Activa','Pagada','Anulada')*/
 INSERT INTO factura (id_factura,id_usuario,fecha,total,estado) VALUES
-(1,1,'2022-01-05',211560,2),
-(2,2,'2022-01-07',554340,2),
-(3,3,'2022-01-07',871000,2),
-(4,1,'2022-01-15',244140,1),
-(5,2,'2022-01-17',414800,1),
-(6,3,'2022-01-21',420000,1);
+(1,1,'2024-06-05',211560,2),
+(2,2,'2024-06-07',554340,2),
+(3,3,'2024-08-07',871000,2),
+(4,1,'2024-08-15',244140,1),
+(5,2,'2024-09-17',414800,1),
+(6,3,'2024-09-21',420000,1);
 
 INSERT INTO venta (id_venta,id_factura,id_producto,precio,cantidad) values
 (1,1,5,45000,3),
@@ -138,61 +138,86 @@ INSERT INTO venta (id_venta,id_factura,id_producto,precio,cantidad) values
 (17,3,12,45000,1),
 (18,3,10,15000,3);
 
+create table role (  
+  rol varchar(20),
+  PRIMARY KEY (rol)  
+);
+
+insert into role (rol) values ('ADMIN'), ('VENDEDOR'), ('USER');
+
 create table rol (
   id_rol INT NOT NULL AUTO_INCREMENT,
   nombre varchar(20),
   id_usuario int,
-  PRIMARY KEY (id_rol),
-  foreign key fk_rol_usuario (id_usuario) references usuario(id_usuario)
+  PRIMARY KEY (id_rol)
 )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
 insert into rol (id_rol, nombre, id_usuario) values
- (1,'ROLE_ADMIN',1), (2,'ROLE_VENDEDOR',1), (3,'ROLE_USER',1),
- (4,'ROLE_VENDEDOR',2), (5,'ROLE_USER',2),
- (6,'ROLE_USER',3);
+ (1,'ADMIN',1), (2,'VENDEDOR',1), (3,'USER',1),
+ (4,'VENDEDOR',2), (5,'USER',2),
+ (6,'USER',3);
 
 
-CREATE TABLE request_matcher (
-    id_request_matcher INT AUTO_INCREMENT NOT NULL,
-    pattern VARCHAR(255) NOT NULL,
-    role_name VARCHAR(50) NOT NULL,
-	PRIMARY KEY (id_request_matcher))
+CREATE TABLE ruta (
+    id_ruta INT AUTO_INCREMENT NOT NULL,
+    patron VARCHAR(255) NOT NULL,
+    rol_name VARCHAR(50) NOT NULL,
+	PRIMARY KEY (id_ruta))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-INSERT INTO request_matcher (pattern, role_name) VALUES ('/producto/nuevo', 'ADMIN'),
+INSERT INTO ruta (patron, rol_name) VALUES ('/producto/nuevo', 'ADMIN'),
 ('/producto/guardar', 'ADMIN'),
 ('/producto/modificar/** ', 'ADMIN'),
-('/producto/eliminar/**', 'ADMIN'),
+('/producto/eliminar/', 'ADMIN'),
 ('/categoria/nuevo', 'ADMIN'),
 ('/categoria/guardar', 'ADMIN'),
 ('/categoria/modificar/** ', 'ADMIN'),
-('/categoria/eliminar/**', 'ADMIN'),
-('/usuario/nuevo', 'ADMIN'),
-('/usuario/guardar', 'ADMIN'),
-('/usuario/modificar/** ', 'ADMIN'),
-('/usuario/eliminar/**', 'ADMIN'),
-('/reportes/**', 'ADMIN'),
+('/categoria/eliminar/', 'ADMIN'),
+('/usuario/', 'ADMIN'),
+('/constante/', 'ADMIN'),
+('/role/** ', 'ADMIN'),
+('/usuario_role/', 'ADMIN'),
+('/ruta/', 'ADMIN'),
 ('/producto/listado', 'VENDEDOR'),
 ('/categoria/listado', 'VENDEDOR'),
-('/usuario/listado', 'VENDEDOR'),
-('/facturar/carrito', 'USER');
+('/pruebas/', 'VENDEDOR'),
+('/reportes/', 'VENDEDOR'),
+('/facturar/carrito', 'USER'),
+('/payment/', 'USER');
 
-CREATE TABLE request_matcher_all (
-    id_request_matcher INT AUTO_INCREMENT NOT NULL,
-    pattern VARCHAR(255) NOT NULL,
-	PRIMARY KEY (id_request_matcher))
+CREATE TABLE ruta_permit (
+    id_ruta INT AUTO_INCREMENT NOT NULL,
+    patron VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id_ruta))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-INSERT INTO request_matcher_all (pattern) VALUES ('/'),
+INSERT INTO ruta_permit (patron) VALUES 
+('/'),
 ('/index'),
-('/errores/**'),
-('/carrito/**'),
-('/pruebas/**'),
-('/reportes/**'),
-('/registro/**'),
-('/js/**'),
-('/webjars/**');
+('/errores/'),
+('/carrito/'),
+('/registro/'),
+('/js/'),
+('/webjars/');
+
+CREATE TABLE constante (
+    id_constante INT AUTO_INCREMENT NOT NULL,
+    atributo VARCHAR(25) NOT NULL,
+    valor VARCHAR(150) NOT NULL,
+	PRIMARY KEY (id_constante))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO constante (atributo,valor) VALUES 
+('dominio','localhost'),
+('certificado','c:/cert'),
+('dolar','520.75'),
+('paypal.client-id','AUjOjw5Q1I0QLTYjbvRS0j4Amd8xrUU2yL9UYyb3TOTcrazzd3G3lYRc6o7g9rOyZkfWEj2wxxDi0aRz'),
+('paypal.client-secret','EMdb08VRlo8Vusd_f4aAHRdTE14ujnV9mCYPovSmXCquLjzWd_EbTrRrNdYrF1-C4D4o-57wvua3YD2u'),
+('paypal.mode','sandbox'),
+('urlPaypalCancel','http://localhost/payment/cancel'),
+('urlPaypalSuccess','http://localhost/payment/success');

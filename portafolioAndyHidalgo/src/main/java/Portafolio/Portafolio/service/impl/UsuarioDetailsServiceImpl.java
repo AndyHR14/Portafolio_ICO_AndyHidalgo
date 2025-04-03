@@ -40,7 +40,7 @@ public class UsuarioDetailsServiceImpl implements UsuarioDetailsService, UserDet
         session.setAttribute("usuarioImagen", usuario.getRutaImagen());
         var roles = new ArrayList <GrantedAuthority>();
         for (Rol rol : usuario.getRoles()){
-            roles.add(new SimpleGrantedAuthority(rol.getNombre()));
+            roles.add(new SimpleGrantedAuthority("ROLE_" + rol.getNombre()));
         }
         return new User(usuario.getUsername(), usuario.getPassword(), roles);
     }
